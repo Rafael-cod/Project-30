@@ -75,7 +75,7 @@ function draw() {
   noStroke();
   textSize(20)
   fill(0)
-  text("Drag the hexagonal stone and release it, to launch it towards the blocks",100, 50)
+  text("Drag the hexagonal stone and release it, to launch it towards the blocks",100, 25)
 
   noStroke();
   textSize(20)
