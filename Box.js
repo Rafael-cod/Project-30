@@ -23,7 +23,6 @@ class Box {
       translate(pos.x, pos.y);
       strokeWeight(4);
       stroke(100,200,100);
-      fill(100,100,200);
       rectMode(CENTER);
       rect(0,0,this.width,this.height);
       pop();
@@ -34,7 +33,6 @@ class Box {
       tint(255,this.visibility);
       strokeWeight(4);
       stroke(100,200,100);
-      fill(100,100,200);
       rect(this.image,this.body.position.x,this.body.position.y,50,50);
       pop();
     }

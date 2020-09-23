@@ -72,6 +72,16 @@ function draw() {
   background(100);
   //Engine.update(engine);
 
+  noStroke();
+  textSize(20)
+  fill(0)
+  text("Drag the hexagonal stone and release it, to launch it towards the blocks",100, 50)
+
+  noStroke();
+  textSize(20)
+  fill(0)
+  text("Press space to get a second chance to play",600, 500)
+
   drawSprites();
  
   ground1.display();
@@ -79,6 +89,8 @@ function draw() {
   ground3.display();
   hexagon.display();
   sling.display();
+
+  fill("red");
   box1.display();
   box2.display();
   box3.display();
@@ -86,23 +98,35 @@ function draw() {
   box5.display();
   box6.display();
   box7.display();
+
+  fill("yellow");
   box8.display();
   box9.display();
   box10.display();
   box11.display();
   box12.display();
+
+  fill("pink");
   box13.display();
   box14.display();
   box15.display();
+
+  fill("blue");
   box16.display();
+
+  fill("green")
   box17.display();
   box18.display();
   box19.display();
   box20.display();
   box21.display();
+
+  fill("blue")
   box22.display();
   box23.display();
   box24.display();
+  
+  fill("red")
   box25.display();
 
 }
@@ -116,7 +140,8 @@ function mouseReleased(){
 }
 
 function keyPressed(){
-  if(keyCode === 32){
+  if(keyCode === 32 && hexagon.body.speed < 1){
       sling.attach(hexagon.body);
+      Matter.Body.setPosition(hexagon.body,{x:50,y:200});
   }
 }
